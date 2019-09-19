@@ -9,7 +9,7 @@ function Week(props) {
 
     const [days, setDays] = React.useState([]);
     React.useEffect(function () {
-        var promise = fetch('http://api.openweathermap.org/data/2.5/forecast?q=Cali,couk&APPID=3e2faa989fda1287debdc076b7287df2');
+        var promise = fetch('http://api.openweathermap.org/data/2.5/forecast?q=Cali,couk&APPID=7f24b9a61672c5313af4f3cfe490c10e');
 
         promise.then((info) => {
             return info.json();
@@ -39,6 +39,7 @@ function Week(props) {
 
         <Route path="/week/:day" render={(props) => {
             console.log(props.match.params.day);
+            //aqui deberia pasar lo del modal
             return null;
         }} />
     </Grid>
